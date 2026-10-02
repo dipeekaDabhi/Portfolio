@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dipeeka Dabhi | Senior Full-Stack Developer (.NET Core & Angular)</title>
+  <meta name="description" content="Portfolio of Dipeeka Dabhi - Full-Stack Developer with 7+ years experience specializing in .NET Core, Angular, Clean Architecture, Elasticsearch, and Cloud Solutions." />
+  <meta name="keywords" content=".NET Core, Angular, Full Stack Developer, C#, TypeScript, Elasticsearch, Redis, Microservices, Multi-tenant, Portfolio, Dipeeka Dabhi" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+              accent: '#06b6d4',
+              coral: '#f43f5e',
+            },
+            dark: {
+              bg: '#0B0F19',
+              card: '#111827',
+              border: '#1F2937',
+              muted: '#9CA3AF'
+            }
+          },
+          animation: {
+            'blob': 'blob 7s infinite',
+            'fade-in': 'fadeIn 0.6s ease-out forwards',
+            'float': 'float 3s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -40px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: 0.7 },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B0F19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #374151;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4F46E5;
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .dark .glass {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(229, 231, 235, 0.8);
+    }
+    .dark .glass-card {
+      background: rgba(17, 24, 39, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(31, 41, 55, 0.8);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    }
+    .dark .grid-pattern {
+      background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+    }
+
+    /* Badge Glow */
+    .glow-brand {
+      box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-[#0B0F19] dark:text-slate-100 transition-colors duration-300 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden min-h-screen">
+
+  <!-- Background Decorative Grid & Blobs -->
+  <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
+  <div class="fixed -top-40 -left-40 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none animate-blob"></div>
+  <div class="fixed top-1/3 -right-40 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl pointer-events-none animate-blob animation-delay-2000"></div>
+  <div class="fixed -bottom-40 left-1/3 w-96 h-96 bg-pink-500/15 rounded-full blur-3xl pointer-events-none animate-blob animation-delay-4000"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-200/80 dark:border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-mono font-bold text-lg shadow-lg group-hover:scale-105 transition-transform">
+          DD
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-slate-900 dark:text-white tracking-tight text-base leading-tight group-hover:text-brand-500 transition-colors">Dipeeka Dabhi</span>
+          <span class="text-xs font-mono text-slate-500 dark:text-slate-400">Full-Stack Engineer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#about" class="px-3 py-1.5 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition">About</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition">Skills</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition">Projects</a>
+        <a href="#experience" class="px-3 py-1.5 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition">Experience</a>
+        <a href="#education" class="px-3 py-1.5 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition">Education</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition">Contact</a>
+      </nav>
+
+      <!-- Action Utilities (Theme, Resume, CTA) -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition">
+          <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
+        </button>
+
+        <!-- Resume Modal Trigger Button -->
+        <button onclick="openResumeModal()" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 bg-white/50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-200 transition shadow-sm hover:shadow">
+          <i data-lucide="file-text" class="w-4 h-4 text-brand-500"></i>
+          <span>Resume</span>
+        </button>
+
+        <!-- Quick Hire CTA -->
+        <a href="#contact" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white shadow-md shadow-brand-500/20 hover:shadow-lg hover:shadow-brand-500/30 transition transform hover:-translate-y-0.5">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-200/60 dark:hover:bg-slate-800">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 px-4 pt-2 pb-4 space-y-2 backdrop-blur-lg">
+      <a href="#about" class="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+      <a href="#skills" class="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
+      <a href="#projects" class="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+      <a href="#experience" class="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
+      <a href="#education" class="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Education</a>
+      <a href="#contact" class="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex gap-2">
+        <button onclick="openResumeModal()" class="w-full text-center py-2 px-3 rounded-lg border border-slate-300 dark:border-slate-700 text-sm font-medium">View Resume</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 space-y-24 md:space-y-32">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-6 md:pt-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div class="flex-1 space-y-6 text-center lg:text-left">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-400 text-xs font-semibold shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>Available for High-Impact Roles & Consulting</span>
+        </div>
+
+        <!-- Headline -->
+        <div class="space-y-2">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+            Engineering Scalable, <br class="hidden sm:inline" />
+            <span class="gradient-text">High-Performance</span> <br />
+            Enterprise Applications
+          </h1>
+          <p class="text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0">
+            Hi, I'm <span class="font-bold text-slate-900 dark:text-white">Dipeeka Dabhi</span> — Full-Stack Developer with <span class="text-brand-600 dark:text-brand-400 font-semibold">7+ years of experience</span> crafting mission-critical platforms with <span class="text-brand-600 dark:text-brand-400 font-semibold">.NET Core</span>, <span class="text-brand-600 dark:text-brand-400 font-semibold">Angular</span>, Elasticsearch, and Cloud Architectures.
+          </p>
+        </div>
+
+        <!-- Quick Badges & Tech Chips -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 font-mono text-xs text-slate-600 dark:text-slate-400">
+          <span class="px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800/80 border border-slate-300/50 dark:border-slate-700">.NET Core 8 / C#</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800/80 border border-slate-300/50 dark:border-slate-700">Angular v14-v18+</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800/80 border border-slate-300/50 dark:border-slate-700">Elasticsearch 60M+</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800/80 border border-slate-300/50 dark:border-slate-700">Multi-Tenancy</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800/80 border border-slate-300/50 dark:border-slate-700">CIAM & RBAC</span>
+          <span class="px-2.5 py-1 rounded-md bg-slate-200/70 dark:bg-slate-800/80 border border-slate-300/50 dark:border-slate-700">Redis & SignalR</span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
+          <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 font-semibold text-sm shadow-xl transition transform hover:-translate-y-0.5">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>View Enterprise Projects</span>
+          </a>
+          <a href="#experience" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass-card hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-sm transition">
+            <i data-lucide="briefcase" class="w-4 h-4 text-brand-500"></i>
+            <span>Work History</span>
+          </a>
+          <button onclick="openResumeModal()" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-brand-500/40 hover:border-brand-500 text-brand-600 dark:text-brand-400 font-semibold text-sm transition hover:bg-brand-50 dark:hover:bg-brand-950/40">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Resume</span>
+          </button>
+        </div>
+
+        <!-- Contact Links Quick Access -->
+        <div class="flex items-center justify-center lg:justify-start gap-6 pt-2 text-slate-500 dark:text-slate-400 text-sm">
+          <a href="mailto:solankidipeeka98@gmail.com" class="flex items-center gap-1.5 hover:text-brand-600 dark:hover:text-brand-400 transition group">
+            <i data-lucide="mail" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            <span>solankidipeeka98@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/solankidipeeka" target="_blank" rel="noopener" class="flex items-center gap-1.5 hover:text-brand-600 dark:hover:text-brand-400 transition group">
+            <i data-lucide="linkedin" class="w-4 h-4 group-hover:scale-110 transition"></i>
+            <span>linkedin/solankidipeeka</span>
+          </a>
+          <div class="hidden sm:flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-rose-500"></i>
+            <span>Ahmedabad, India</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Interactive Tech Visual / Terminal Card -->
+      <div class="w-full lg:w-5/12 max-w-lg">
+        <div class="relative rounded-2xl glass-card overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-800/90">
+          
+          <!-- Terminal Header -->
+          <div class="bg-slate-100 dark:bg-slate-900/90 px-4 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+              <span class="text-xs font-mono text-slate-500 dark:text-slate-400 ml-2 font-semibold">dipeeka-architect.cs</span>
+            </div>
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">C# / .NET 8</span>
+          </div>
+
+          <!-- Code Content Preview -->
+          <div class="p-5 font-mono text-xs space-y-2 text-slate-700 dark:text-slate-300 overflow-x-auto leading-relaxed">
+            <p><span class="text-purple-600 dark:text-purple-400 font-semibold">public record</span> <span class="text-blue-600 dark:text-blue-300 font-bold">EngineerProfile</span> {</p>
+            <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">public string</span> Name =&gt; <span class="text-emerald-600 dark:text-emerald-400">"Dipeeka Dabhi"</span>;</p>
+            <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">public int</span> ExperienceYears =&gt; <span class="text-amber-600 dark:text-amber-400">7</span>;</p>
+            <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">public string[]</span> CoreStack =&gt; [</p>
+            <p class="pl-8 text-emerald-600 dark:text-emerald-400">".NET Core", "Angular 18+", "C#", "TypeScript",</p>
+            <p class="pl-8 text-emerald-600 dark:text-emerald-400">"Elasticsearch", "Redis", "SignalR", "PostgreSQL"</p>
+            <p class="pl-4">];</p>
+            <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">public bool</span> CleanArchitecture =&gt; <span class="text-brand-500 font-bold">true</span>;</p>
+            <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">public long</span> RecordsIndexed =&gt; <span class="text-amber-600 dark:text-amber-400">60_000_000+</span>;</p>
+            <p class="pl-4"><span class="text-purple-600 dark:text-purple-400">public string</span> Focus =&gt; <span class="text-emerald-600 dark:text-emerald-400">"Scalability, Resilience & Multi-Tenancy"</span>;</p>
+            <p>}</p>
+          </div>
+
+          <!-- Quick Stat Footer -->
+          <div class="bg-slate-50/80 dark:bg-slate-900/60 p-4 border-t border-slate-200/80 dark:border-slate-800 grid grid-cols-2 gap-3 text-center">
+            <div class="p-2 rounded-xl bg-white/70 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+              <div class="text-xl font-bold text-brand-600 dark:text-brand-400">7+ Years</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Enterprise Exp</div>
+            </div>
+            <div class="p-2 rounded-xl bg-white/70 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+              <div class="text-xl font-bold text-brand-accent">60M+</div>
+              <div class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Indexed Records</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- METRICS & IMPACT COUNTERS -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="glass-card p-6 rounded-2xl text-center space-y-1 hover:border-brand-500/50 transition">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-2">
+          <i data-lucide="award" class="w-5 h-5"></i>
+        </div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">7+</div>
+        <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">Years Industry Experience</div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl text-center space-y-1 hover:border-brand-500/50 transition">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-2">
+          <i data-lucide="database" class="w-5 h-5"></i>
+        </div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">60M+</div>
+        <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">Search Records Handled</div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl text-center space-y-1 hover:border-brand-500/50 transition">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-2">
+          <i data-lucide="zap" class="w-5 h-5"></i>
+        </div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">50%</div>
+        <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">Latency & Query Reduction</div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl text-center space-y-1 hover:border-brand-500/50 transition">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-2">
+          <i data-lucide="server" class="w-5 h-5"></i>
+        </div>
+        <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">10+</div>
+        <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400">Enterprise Systems Built</div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT ME & PHILOSOPHY -->
+    <section id="about" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3">
+        <div class="p-2 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+          <i data-lucide="user" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Professional Summary & Expertise</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Architecting resilient systems that power government and enterprise domains</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 glass-card p-6 sm:p-8 rounded-2xl space-y-4 leading-relaxed text-slate-600 dark:text-slate-300">
+          <p>
+            I am a results-oriented <strong>Senior Full-Stack Developer</strong> with over 7 years of specialized experience in designing, building, and deploying mission-critical web applications for government, public sector, and international enterprises.
+          </p>
+          <p>
+            My core strength lies in combining modern frontend frameworks (<span class="text-brand-600 dark:text-brand-400 font-semibold">Angular v14–v18+</span>, TypeScript, RxJS, PrimeNG) with high-throughput backend services (<span class="text-brand-600 dark:text-brand-400 font-semibold">.NET Core, C#, Clean Architecture, Microservices</span>).
+          </p>
+          <p>
+            I have deep expertise in building large-scale search infrastructure with <strong>Elasticsearch indexing 60M+ records</strong>, distributed caching via <strong>Redis</strong>, real-time messaging with <strong>SignalR</strong>, automated multi-tenant routing, and enterprise identity management (CIAM / RBAC).
+          </p>
+          <div class="pt-2 flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i> Multi-Tenant Architecture
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i> CIAM & Smart Permissions
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i> Multilingual (Arabic RTL / English LTR)
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i> CI/CD & Azure DevOps
+            </span>
+          </div>
+        </div>
+
+        <!-- Highlights Card -->
+        <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4 text-brand-500"></i> Core Pillars
+          </h3>
+          <ul class="space-y-3.5 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+              </div>
+              <div><strong>Enterprise Security:</strong> OpenID Connect, OAuth2, granular dynamic permissions & RBAC.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="gauge" class="w-5 h-5"></i>
+              </div>
+              <div><strong>High Performance:</strong> Optimized indexing, Redis caching, batching & asynchronous background workers.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="layout" class="w-5 h-5"></i>
+              </div>
+              <div><strong>Dynamic UI Engineering:</strong> JSON-driven dynamic form engines and reusable component ecosystems.</div>
+            </li>
+          </ul>
+
+          <div class="pt-2">
+            <a href="#contact" class="w-full text-center block py-2.5 px-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs transition shadow-md">
+              Initiate Collaboration
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="space-y-8 scroll-mt-24">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="p-2 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Technical Skills & Technologies</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Comprehensive stack across full-lifecycle enterprise development</p>
+          </div>
+        </div>
+
+        <!-- Live Skill Search -->
+        <div class="relative w-full sm:w-64">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="skill-search" placeholder="Filter skills (e.g., Redis)..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-container">
+
+        <!-- Category 1: Backend & Architecture -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-500/40 transition skill-group">
+          <div class="flex items-center gap-2.5 text-brand-600 dark:text-brand-400 font-bold text-base">
+            <i data-lucide="server" class="w-5 h-5"></i>
+            <h3>Backend & Architecture</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">.NET Core (v6/v8+)</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">C#</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Clean Architecture</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Entity Framework Core</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">RESTful APIs</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">GraphQL</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Microservices</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Multi-Tenancy</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">ASP.NET MVC</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">.NET Framework</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Frontend & UI Engineering -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-500/40 transition skill-group">
+          <div class="flex items-center gap-2.5 text-cyan-600 dark:text-cyan-400 font-bold text-base">
+            <i data-lucide="layout-template" class="w-5 h-5"></i>
+            <h3>Frontend & UI Engineering</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Angular (v14 – v18+)</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">TypeScript</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">RxJS & State Management</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">JSON-Driven Form Engine</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">PrimeNG</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Tailwind CSS</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">SCSS / CSS3</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Multilingual RTL/LTR (Arabic)</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">HTML5</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Search, Caching & Real-Time -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-500/40 transition skill-group">
+          <div class="flex items-center gap-2.5 text-amber-600 dark:text-amber-400 font-bold text-base">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+            <h3>Search, Caching & Real-Time</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Elasticsearch (60M+ Docs)</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Redis In-Memory Caching</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">SignalR Live Updates</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">FOLIO mod-search</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">EBSCO EDS Federated Search</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Data Pipelines & Indexers</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Security, Identity & Protocols -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-500/40 transition skill-group">
+          <div class="flex items-center gap-2.5 text-emerald-600 dark:text-emerald-400 font-bold text-base">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+            <h3>Security & Identity (CIAM)</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">CIAM (Identity Access Mgmt)</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Dynamic RBAC & Permissions</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">OpenID Connect & OAuth2</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">JWT Token Lifecycle</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Audit Trails & Logs</span>
+          </div>
+        </div>
+
+        <!-- Category 5: Databases & Storage -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-500/40 transition skill-group">
+          <div class="flex items-center gap-2.5 text-rose-600 dark:text-rose-400 font-bold text-base">
+            <i data-lucide="database" class="w-5 h-5"></i>
+            <h3>Databases & Storage</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">MS SQL Server</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">PostgreSQL</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">MongoDB</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Stored Procedures & Indexing</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Query Optimization</span>
+          </div>
+        </div>
+
+        <!-- Category 6: Cloud, DevOps & Tools -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 hover:border-brand-500/40 transition skill-group">
+          <div class="flex items-center gap-2.5 text-purple-600 dark:text-purple-400 font-bold text-base">
+            <i data-lucide="cloud" class="w-5 h-5"></i>
+            <h3>Cloud, DevOps & Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Docker</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">GitHub Actions</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Azure DevOps & Pipelines</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Git / TFS</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">JIRA & Agile</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">DevExpress / WPF / WCF</span>
+            <span class="skill-tag px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200">Postman API Testing</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FEATURED ENTERPRISE PROJECTS -->
+    <section id="projects" class="space-y-8 scroll-mt-24">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="p-2 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Featured Enterprise Systems & Case Studies</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Highlights from government, public administration, and large enterprise deliveries</p>
+          </div>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="flex items-center gap-1.5 flex-wrap" id="project-filters">
+          <button data-filter="all" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white transition">All Systems</button>
+          <button data-filter="dotnet" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/60 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 transition">.NET Core</button>
+          <button data-filter="angular" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/60 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 transition">Angular</button>
+          <button data-filter="search" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/60 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 transition">Elasticsearch</button>
+          <button data-filter="gov" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200/60 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 transition">Gov / Semi-Gov</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projects-grid">
+
+        <!-- Project 1: DTLMS -->
+        <div class="project-card glass-card p-6 sm:p-8 rounded-2xl space-y-5 hover:border-brand-500/50 transition flex flex-col justify-between" data-tags="dotnet angular search gov">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+                Saudi Semi-Government
+              </span>
+              <span class="text-xs text-slate-400 font-mono">2025 - Present</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+              DTLMS – Multi-Tenant Digital Library Management System
+            </h3>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Architected and developed a massive multi-tenant platform for Saudi public libraries. Integrated complex external enterprise engines including <strong>FOLIO LMS</strong> (holdings, circulation), <strong>EBSCO EDS</strong> federated academic search, and <strong>Elasticsearch handling 60M+ catalog records</strong>.
+            </p>
+
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Automated multi-tenant domain routing & tenant-level custom configuration pipelines.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Real-time notifications using <strong>SignalR</strong> and API acceleration with <strong>Redis</strong>.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Event ticketing (Pretix), space/device booking, book borrowing, return & fines engine.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4 pt-3 border-t border-slate-200/80 dark:border-slate-800">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">.NET Core</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Angular 18</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Elasticsearch 60M</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Redis</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SignalR</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">FOLIO / EBSCO</span>
+            </div>
+            <button onclick="viewProjectDetails('dtlms')" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition">
+              <span>Explore Technical Architecture</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2: Dubai GDRFA CIAM -->
+        <div class="project-card glass-card p-6 sm:p-8 rounded-2xl space-y-5 hover:border-brand-500/50 transition flex flex-col justify-between" data-tags="dotnet angular gov">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                Government of Dubai
+              </span>
+              <span class="text-xs text-slate-400 font-mono">2025</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+              Dubai GDRFA – CIAM & Smart Permissions System
+            </h3>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Engineered the Customer Identity & Access Management (CIAM) and Smart Permission matrix for Dubai's <strong>General Directorate of Residency and Foreigners Affairs (GDRFA)</strong>.
+            </p>
+
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Granular dynamic Role-Based Access Control (RBAC) across multi-department tiers.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Multilingual Angular admin UI with dynamic Arabic RTL and English LTR layouts.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>JSON-driven form builders allowing fast configuration of compliance checks without code redeploy.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4 pt-3 border-t border-slate-200/80 dark:border-slate-800">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Angular</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">.NET Core</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Dynamic RBAC</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Arabic RTL/LTR</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CIAM</span>
+            </div>
+            <button onclick="viewProjectDetails('gdrfa')" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition">
+              <span>Explore Security Implementation</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3: Dubai LMS & Esnaad Platform -->
+        <div class="project-card glass-card p-6 sm:p-8 rounded-2xl space-y-5 hover:border-brand-500/50 transition flex flex-col justify-between" data-tags="dotnet angular gov">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+                Enterprise LMS & Outsourcing
+              </span>
+              <span class="text-xs text-slate-400 font-mono">2025</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+              Dubai LMS & Esnaad (Assignment & Outsourcing Platform)
+            </h3>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Designed and implemented provider agreement workflows, qualification-based pricing calculation engines (PhD/Master's/Bachelor's tiers), post-LPO lockouts, and automated official Arabic assignment document (كتاب الانتداب) generator.
+            </p>
+
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Training Needs Assessment (TNA) and internal instructor search/dispatch algorithms.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Multi-tier Coordinator approval/rejection workflows with mandatory audit notes.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4 pt-3 border-t border-slate-200/80 dark:border-slate-800">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">.NET Core</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Angular</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Pricing Engine</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Doc Generation</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Audit Trails</span>
+            </div>
+            <button onclick="viewProjectDetails('esnaad')" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition">
+              <span>Explore Workflow Details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4: Enterprise ERP & File Management System (FMS) -->
+        <div class="project-card glass-card p-6 sm:p-8 rounded-2xl space-y-5 hover:border-brand-500/50 transition flex flex-col justify-between" data-tags="dotnet angular search">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                Enterprise Cloud & Logistics
+              </span>
+              <span class="text-xs text-slate-400 font-mono">2021 - 2025</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+              Enterprise FMS & Cloud ERP Suite
+            </h3>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Delivered enterprise File Management System (FMS) and comprehensive ERP modules (10+ integrated business domains). Slashed data query and page loading latency by <strong>50%</strong> through schema refactoring and intelligent database indexing.
+            </p>
+
+            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Handheld warehouse inventory scanning system in ASP.NET MVC / HTML5.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+                <span>Automated CI/CD deployment pipelines on Azure DevOps with automated test runs.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-4 pt-3 border-t border-slate-200/80 dark:border-slate-800">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">.NET Core</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">C#</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MS SQL Server</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Azure CI/CD</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">BI Analytics</span>
+            </div>
+            <button onclick="viewProjectDetails('erp')" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition">
+              <span>Explore Optimization Impact</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CAREER JOURNEY & WORK EXPERIENCE -->
+    <section id="experience" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3">
+        <div class="p-2 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+          <i data-lucide="briefcase" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Career History & Milestones</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Over 7 years of progressive engineering leadership and technical delivery</p>
+        </div>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 sm:ml-8 space-y-12 pl-6 sm:pl-10">
+
+        <!-- Role 1 -->
+        <div class="relative group">
+          <!-- Timeline Marker -->
+          <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-600 border-4 border-white dark:border-slate-900 shadow-md flex items-center justify-center">
+            <span class="w-2 h-2 rounded-full bg-white"></span>
+          </div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Full-Stack Developer (.NET Core + Angular)</h3>
+                <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Excellent Webworld Software Company</p>
+              </div>
+              <div class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 w-fit">
+                04/2025 – Present
+              </div>
+            </div>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              Leading backend and frontend architecture for large-scale enterprise systems (Saudi Semi-Government DTLMS, Dubai GDRFA CIAM, and Dubai LMS Esnaad platforms).
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+              <li>Delivered modular, resilient back-end services using .NET Core with multi-tenant domain routing and tenant-specific configuration policies.</li>
+              <li>Engineered 60M+ record indexing pipelines in Elasticsearch and implemented Redis caching to drastically reduce database overhead.</li>
+              <li>Integrated real-time SignalR notifications, FOLIO LMS bibliographic data synchronization, and EBSCO EDS academic search federation.</li>
+              <li>Built Angular admin portals supporting dynamic JSON form generators and bidirectional Arabic (RTL) / English (LTR) rendering.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-slate-400 dark:bg-slate-700 border-4 border-white dark:border-slate-900 shadow-md"></div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">System Engineer</h3>
+                <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Acty System India Pvt. Ltd</p>
+              </div>
+              <div class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 w-fit">
+                04/2023 – 01/2025
+              </div>
+            </div>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+              <li>Delivered end-to-end features on Microsoft enterprise projects using Angular and .NET Core.</li>
+              <li>Enhanced automated test suite coverage by 10% and eradicated critical UI/UX and accessibility bottlenecks.</li>
+              <li>Conducted R&D and core implementation for enterprise File Management System (FMS).</li>
+              <li>Managed CI/CD deployment releases, pipeline troubleshooting, and Azure cloud operations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-slate-400 dark:bg-slate-700 border-4 border-white dark:border-slate-900 shadow-md"></div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Programmer</h3>
+                <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Acty System India Pvt. Ltd</p>
+              </div>
+              <div class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 w-fit">
+                04/2021 – 03/2023
+              </div>
+            </div>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+              <li>Engineered core ERP modules using .NET Core, C#, MS SQL Server, and Angular.</li>
+              <li>Reduced data query latency and page load times by 50% through schema optimizations and indexing.</li>
+              <li>Developed handheld barcode inventory management systems using ASP.NET MVC, DevExpress, and HTML5.</li>
+              <li>Mentored 5+ junior developers, led technical sprint allocations, and performed rigorous code reviews.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-slate-400 dark:bg-slate-700 border-4 border-white dark:border-slate-900 shadow-md"></div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Programmer & Trainee</h3>
+                <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Acty System India Pvt. Ltd</p>
+              </div>
+              <div class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 w-fit">
+                02/2019 – 03/2021
+              </div>
+            </div>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+              <li>Integrated 10+ ERP modules improving operational efficiency by 30%.</li>
+              <li>Created business intelligence dashboards, reporting engines, and role-based authentication layers.</li>
+              <li>Mastered .NET, WPF, MVVM architecture, SQL Server, and agile collaboration standards.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDUCATION & LANGUAGES -->
+    <section id="education" class="space-y-8 scroll-mt-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Education Card -->
+        <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="p-2 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Education Background</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Academic qualifications in Information Technology</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 rounded-xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 dark:text-white text-sm">Bachelor of Engineering (B.E.) in IT</span>
+                <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">2016 – 2019</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Government Engineering College, Bhavnagar, Gujarat</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 dark:text-white text-sm">Diploma in Information Technology</span>
+                <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">2013 – 2016</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400">Sir B.P.T.I, Bhavnagar, Gujarat</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages & Soft Skills -->
+        <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="p-2 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+              <i data-lucide="globe" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Languages & Communication</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Multilingual versatility for global teams</p>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+              <span class="font-semibold text-sm">English</span>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-500/10 text-brand-600 dark:text-brand-400">Professional Working</span>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+              <span class="font-semibold text-sm">Hindi</span>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-500/10 text-brand-600 dark:text-brand-400">Full Professional</span>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+              <span class="font-semibold text-sm">Gujarati</span>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-500/10 text-brand-600 dark:text-brand-400">Native</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT & GET IN TOUCH -->
+    <section id="contact" class="space-y-8 scroll-mt-24">
+      <div class="glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+        
+        <div class="max-w-3xl space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-semibold">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span>Get in Touch</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Ready to Build Robust, Scalable Enterprise Software Together?
+          </h2>
+
+          <p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+            Whether you need a Senior .NET / Angular technical lead, architectural consulting for a 60M+ record search platform, or high-performance enterprise app development, let's connect.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <!-- Email -->
+            <a href="mailto:solankidipeeka98@gmail.com" class="p-4 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition group flex flex-col items-start justify-between space-y-2">
+              <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center group-hover:scale-110 transition">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase">Email Me</div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white truncate max-w-[180px]">solankidipeeka98@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+919173306289" class="p-4 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition group flex flex-col items-start justify-between space-y-2">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center group-hover:scale-110 transition">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase">Call / WhatsApp</div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white">+91 9173306289</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/solankidipeeka" target="_blank" rel="noopener" class="p-4 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition group flex flex-col items-start justify-between space-y-2">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center group-hover:scale-110 transition">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-semibold text-slate-400 uppercase">LinkedIn Profile</div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white">/in/solankidipeeka</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <button onclick="copyContactInfo()" id="copy-btn" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold transition hover:opacity-90">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+              <span>Copy Contact Details</span>
+            </button>
+            <button onclick="openResumeModal()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-brand-500/40 text-brand-600 dark:text-brand-400 text-xs font-bold transition hover:bg-brand-50 dark:hover:bg-brand-950/50">
+              <i data-lucide="eye" class="w-4 h-4"></i>
+              <span>View Interactive Resume</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="mt-20 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>© 2026 Dipeeka Dabhi. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-brand-500 transition">Back to Top</a>
+        <a href="mailto:solankidipeeka98@gmail.com" class="hover:text-brand-500 transition">Email</a>
+        <a href="https://linkedin.com/in/solankidipeeka" target="_blank" rel="noopener" class="hover:text-brand-500 transition">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- RESUME PREVIEW & PRINT MODAL -->
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
+        <div class="flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-brand-500"></i>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base">Dipeeka Dabhi – Curriculum Vitae</h3>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold inline-flex items-center gap-1.5 transition">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button onclick="closeResumeModal()" class="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Printable Resume Content) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-slate-800 dark:text-slate-200 text-xs sm:text-sm leading-relaxed" id="resume-content">
+        
+        <!-- Header Info -->
+        <div class="border-b border-slate-200 dark:border-slate-800 pb-4">
+          <h1 class="text-2xl font-extrabold text-slate-900 dark:text-white">Dipeeka Dabhi</h1>
+          <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Full-Stack Developer (.NET Core + Angular)</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 pt-1">
+            solankidipeeka98@gmail.com | linkedin.com/in/solankidipeeka | +91 9173306289 | Ahmedabad, India
+          </p>
+        </div>
+
+        <!-- Summary -->
+        <div class="space-y-1">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs border-b border-slate-200 dark:border-slate-800 pb-1">Professional Summary</h4>
+          <p class="text-slate-600 dark:text-slate-300 text-xs pt-1 leading-relaxed">
+            Full-Stack Developer with 7+ years of experience in designing, developing, testing, and delivering scalable enterprise web applications. Deep technical expertise across .NET Core, C#, Angular, TypeScript, RESTful APIs, and cloud-native ecosystems. Proven track record in CI/CD automation, Docker containerization, high-performance search indexing (Elasticsearch), in-memory caching (Redis), real-time systems (SignalR), and large-scale data processing.
+          </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs border-b border-slate-200 dark:border-slate-800 pb-1">Technical Skills</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div><strong>Programming:</strong> C#, .NET Core, .NET Framework, TypeScript, JavaScript, SQL</div>
+            <div><strong>Frontend & UI:</strong> Angular (v14–v18+), RxJS, PrimeNG, Tailwind CSS, SCSS, JSON-Driven Forms</div>
+            <div><strong>Backend & Arch:</strong> RESTful APIs, GraphQL, Entity Framework Core, Clean Architecture, Microservices, Multi-Tenancy</div>
+            <div><strong>Search & Caching:</strong> Elasticsearch (60M+ docs), mod-search (FOLIO), Redis Caching</div>
+            <div><strong>Real-Time & Identity:</strong> SignalR, CIAM, Smart Permissions, RBAC, OpenID Connect</div>
+            <div><strong>Cloud, DevOps & DB:</strong> Docker, GitHub Actions, Azure DevOps, SQL Server, PostgreSQL, MongoDB</div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="space-y-4">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs border-b border-slate-200 dark:border-slate-800 pb-1">Work Experience</h4>
+          
+          <div class="space-y-1">
+            <div class="flex justify-between font-bold text-slate-900 dark:text-white text-xs">
+              <span>Full-Stack Developer — Excellent Webworld Software Company</span>
+              <span>04/2025 – Present</span>
+            </div>
+            <ul class="list-disc list-inside text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>Built large-scale multi-tenant Digital Library Management System (DTLMS) for Saudi semi-government client.</li>
+              <li>Contributed to Dubai GDRFA CIAM and Smart Permission modules with role-based access control in Angular and .NET Core.</li>
+              <li>Delivered Dubai LMS & Esnaad modules: Provider Agreements, qualification pricing logic, post-LPO lockouts, and official Assignment Document generation.</li>
+              <li>Integrated FOLIO LMS, EBSCO EDS federated search, Pretix ticketing, and 60M+ record Elasticsearch pipelines.</li>
+            </ul>
+          </div>
+
+          <div class="space-y-1">
+            <div class="flex justify-between font-bold text-slate-900 dark:text-white text-xs">
+              <span>System Engineer — Acty System India Pvt. Ltd</span>
+              <span>04/2023 – 01/2025</span>
+            </div>
+            <ul class="list-disc list-inside text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>Delivered end-to-end features on Microsoft enterprise projects using Angular and .NET Core.</li>
+              <li>Enhanced automated test suite coverage by 10% and conducted R&D for Enterprise File Management System (FMS).</li>
+              <li>Managed CI/CD deployments and Azure cloud operations.</li>
+            </ul>
+          </div>
+
+          <div class="space-y-1">
+            <div class="flex justify-between font-bold text-slate-900 dark:text-white text-xs">
+              <span>Senior Programmer — Acty System India Pvt. Ltd</span>
+              <span>04/2021 – 03/2023</span>
+            </div>
+            <ul class="list-disc list-inside text-xs text-slate-600 dark:text-slate-300 space-y-1">
+              <li>Built and enhanced core ERP modules using .NET Core, C#, MS SQL Server, and Angular.</li>
+              <li>Reduced data query latency and page load times by 50% through optimized indexing.</li>
+              <li>Mentored 5+ junior developers and managed technical sprint allocations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="space-y-2">
+          <h4 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs border-b border-slate-200 dark:border-slate-800 pb-1">Education</h4>
+          <div class="text-xs space-y-1">
+            <div class="flex justify-between">
+              <strong>Bachelor of Engineering (B.E.) in IT — Government Engineering College, Bhavnagar</strong>
+              <span>2016 – 2019</span>
+            </div>
+            <div class="flex justify-between">
+              <strong>Diploma in Information Technology — Sir B.P.T.I, Bhavnagar</strong>
+              <span>2013 – 2016</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- PROJECT DEEP DIVE MODAL -->
+  <div id="project-detail-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-5 shadow-2xl">
+      <div class="flex items-center justify-between">
+        <h3 id="modal-title" class="font-bold text-xl text-slate-900 dark:text-white"></h3>
+        <button onclick="closeProjectModal()" class="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="modal-body" class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></div>
+      <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-end">
+        <button onclick="closeProjectModal()" class="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 font-semibold text-xs">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Theme Toggle Functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      htmlEl.classList.add('dark');
+    } else {
+      htmlEl.classList.remove('dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      if (htmlEl.classList.contains('dark')) {
+        localStorage.theme = 'dark';
+      } else {
+        localStorage.theme = 'light';
+      }
+      lucide.createIcons();
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Skill Filter Search
+    const skillSearchInput = document.getElementById('skill-search');
+    skillSearchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const tags = document.querySelectorAll('.skill-tag');
+      const groups = document.querySelectorAll('.skill-group');
+
+      tags.forEach(tag => {
+        const text = tag.textContent.toLowerCase();
+        if (text.includes(query) || query === '') {
+          tag.style.opacity = '1';
+          tag.classList.remove('opacity-30');
+          if (query !== '') {
+            tag.classList.add('ring-2', 'ring-brand-500', 'bg-brand-50', 'dark:bg-brand-950');
+          } else {
+            tag.classList.remove('ring-2', 'ring-brand-500', 'bg-brand-50', 'dark:bg-brand-950');
+          }
+        } else {
+          tag.style.opacity = '0.3';
+          tag.classList.add('opacity-30');
+          tag.classList.remove('ring-2', 'ring-brand-500', 'bg-brand-50', 'dark:bg-brand-950');
+        }
+      });
+    });
+
+    // Project Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-brand-600', 'text-white');
+          b.classList.add('bg-slate-200/60', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        });
+        btn.classList.add('bg-brand-600', 'text-white');
+        btn.classList.remove('bg-slate-200/60', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          const tags = card.getAttribute('data-tags');
+          if (filter === 'all' || tags.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Resume Modal Handlers
+    function openResumeModal() {
+      document.getElementById('resume-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+    function closeResumeModal() {
+      document.getElementById('resume-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Project Deep-Dive Modal Data
+    const projectDetails = {
+      dtlms: {
+        title: "DTLMS – Digital Library Management System Architecture",
+        body: `
+          <div class="space-y-3">
+            <p><strong>Client:</strong> Saudi Semi-Government Organization</p>
+            <p><strong>Core Challenge:</strong> Unifying fragmented institutional library data across multiple autonomous branches with massive search loads and sub-second query requirements.</p>
+            <p><strong>Key Architectural Achievements:</strong></p>
+            <ul class="list-disc list-inside space-y-1.5 text-xs">
+              <li><strong>Elasticsearch Pipeline:</strong> Designed indexing pipelines capable of querying 60M+ bibliographic entries with typo tolerance and facet filters in under 80ms.</li>
+              <li><strong>FOLIO LMS Integration:</strong> Integrated inventory holdings, loan/circulation states, and patron checkouts with custom error handling.</li>
+              <li><strong>EBSCO EDS Integration:</strong> Built custom federated data mapping for research journals and academic publications.</li>
+              <li><strong>Real-time Push:</strong> SignalR integration for instant booking confirmations and live inventory state changes.</li>
+            </ul>
+          </div>
+        `
+      },
+      gdrfa: {
+        title: "Dubai GDRFA – CIAM & Smart Permissions Architecture",
+        body: `
+          <div class="space-y-3">
+            <p><strong>Client:</strong> General Directorate of Residency and Foreigners Affairs (Dubai)</p>
+            <p><strong>Core Challenge:</strong> Enforcing strict multi-level regulatory access control while supporting dynamic form definitions and smooth Arabic RTL user experience.</p>
+            <p><strong>Key Architectural Achievements:</strong></p>
+            <ul class="list-disc list-inside space-y-1.5 text-xs">
+              <li><strong>Dynamic Smart Permissions:</strong> Configured a hierarchical RBAC engine enabling granular permission scoping at runtime.</li>
+              <li><strong>JSON-Driven UI Engine:</strong> Created an Angular form builder that reads JSON configuration schemas to render complex government intake forms with validation rules.</li>
+              <li><strong>Full Bidirectional Internationalization:</strong> Supported Arabic RTL layout with customized PrimeNG theme adaptations.</li>
+            </ul>
+          </div>
+        `
+      },
+      esnaad: {
+        title: "Dubai LMS & Esnaad Platform Architecture",
+        body: `
+          <div class="space-y-3">
+            <p><strong>Domain:</strong> Training Needs Assessment (TNA) & Assignment Management</p>
+            <p><strong>Key Highlights:</strong></p>
+            <ul class="list-disc list-inside space-y-1.5 text-xs">
+              <li><strong>Qualification Pricing Engine:</strong> Automated dynamic fee calculations based on instructor degrees (PhD vs Master's vs Bachelor's).</li>
+              <li><strong>Document Automation:</strong> Auto-generated standardized assignment approval documents (كتاب الانتداب) in Arabic with digital audit stamps.</li>
+              <li><strong>Lockout Policy:</strong> Enforced post-LPO compliance lockouts and multi-tier coordinator sign-offs.</li>
+            </ul>
+          </div>
+        `
+      },
+      erp: {
+        title: "Enterprise ERP & File Management System (FMS)",
+        body: `
+          <div class="space-y-3">
+            <p><strong>Domain:</strong> Logistics, Handheld Inventory & Document Storage</p>
+            <p><strong>Key Highlights:</strong></p>
+            <ul class="list-disc list-inside space-y-1.5 text-xs">
+              <li><strong>50% Latency Reduction:</strong> Redesigned SQL indexes, optimized ORM queries, and eliminated N+1 database bottlenecks.</li>
+              <li><strong>Handheld Scanning:</strong> ASP.NET MVC / HTML5 barcode scanning workflows for warehouse stock tracking.</li>
+              <li><strong>Azure CI/CD Automation:</strong> Automated build and release pipelines with automated regression test execution.</li>
+            </ul>
+          </div>
+        `
+      }
+    };
+
+    function viewProjectDetails(key) {
+      const data = projectDetails[key];
+      if (!data) return;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-body').innerHTML = data.body;
+      document.getElementById('project-detail-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeProjectModal() {
+      document.getElementById('project-detail-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Copy Contact Details
+    function copyContactInfo() {
+      const text = "Dipeeka Dabhi | Full-Stack Developer (.NET Core + Angular)\nEmail: solankidipeeka98@gmail.com\nPhone: +91 9173306289\nLinkedIn: https://linkedin.com/in/solankidipeeka";
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-emerald-400"></i><span>Copied to Clipboard!</span>`;
+        lucide.createIcons();
+        setTimeout(() => {
+          btn.innerHTML = `<i data-lucide="copy" class="w-4 h-4"></i><span>Copy Contact Details</span>`;
+          lucide.createIcons();
+        }, 2500);
+      });
+    }
+
+    // Close modals on escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeResumeModal();
+        closeProjectModal();
+      }
+    });
+  </script>
+</body>
+</html>
